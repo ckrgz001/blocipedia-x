@@ -16,6 +16,29 @@ $navbar-default-bg: #96858F;
     text-decoration: underline;
 }
 
+.navbar-nav>li>a  {
+  color: white !important;
+}
+.navbar-nav>li>a:hover  {
+  color: black !important;
+}
+
+.jumbotron {
+  background-image: asset-url('Great_Library.jpg');
+  background-size: cover;
+  height: 350px;
+  color: white;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+.sign-btn-1 {
+  text-align: center;
+}
+
 footer {
     margin-top: 45px;
     padding-top: 5px;

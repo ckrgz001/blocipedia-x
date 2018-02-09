@@ -1,2 +1,23 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+
+ <div class="center jumbotron">
+   <h1>Blocpedia</h1>
+   <p>Create - Collaborate - Edit</p>
+   <p>
+     <%= link_to "Sign In" %> or
+     <%= link_to "Sign Up"  %> today!
+   </p>
+ </div>
+ 
+ <div class="row">
+   <div class="col-md-6">
+    <div class="sign-btn-1">Sign up as a </br>
+     <h2><%= link_to "BASIC user" %> </h2></br>
+     View, create, update and delete public wikis.</div>
+   </div>
+   <div class="col-md-6">
+     <h2><%= link_to "Sign Up as a Premium user" %> </h2>
+     <p>All the standard benefits of a basic user, plus the ability to create private wikis.</p>
+     
+   </div>
+
+ </div>
