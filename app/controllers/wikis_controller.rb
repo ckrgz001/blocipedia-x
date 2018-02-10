@@ -1,10 +1,11 @@
 class WikisController < ApplicationController
+  before_action :set_wiki, only: [:edit, :update, :show, :destroy]
+
   def index
     @wikis = Wiki.all
   end
 
   def show
-    @wiki = Wiki.find(params[:id])
   end
 
   def new
@@ -26,11 +27,9 @@ class WikisController < ApplicationController
   end
 
   def edit
-    @wiki = Wiki.find(params[:id])
   end
 
   def update
-    @wiki = Wiki.find(params[:id])
     @wiki.title = params[:wiki][:title]
     @wiki.body = params[:wiki][:body]
 
@@ -44,7 +43,6 @@ class WikisController < ApplicationController
   end
 
   def destroy
-    @wiki = Wiki.find(params[:id])
     if @wiki.destroy
       flash[:notice] = "\"#{@wiki.title}\" was deleted successfully."
       redirect_to wikis_path
@@ -52,5 +50,10 @@ class WikisController < ApplicationController
       flash.now[:alert] = "There was an error deleting the article."
       render :show
     end
+  end
+
+  private
+  def set_wiki
+    @wiki = Wiki.find(params[:id])
   end
 end
