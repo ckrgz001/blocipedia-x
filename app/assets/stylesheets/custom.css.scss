@@ -64,6 +64,21 @@ footer ul {
     list-style: none;
   }
   
-.alternate:nth-child(odd) { 
-  background: white; 
+#one th {
+  font-weight: bold;
+  text-align: center;
+}
+
+.wikitable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wikitable td {
+  padding: 5px;
+  border:  #eaeaea 1px solid;
+}
+
+.wikitable tr:nth-child(even) {
+  background: white;
 }
