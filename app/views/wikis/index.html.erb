@@ -1,11 +1,15 @@
 <h1>All Wikis</h1>
-
+<div class="well col-xs-10 col-xs-offset-1">
+   
  <% @wikis.each do |x| %>
  <div class="media">
      <div class="media-body">
        <h4 class="media-heading">
-         <%= link_to x.title, wiki_path(x.id) %>
+        <div class="alternate">
+         - <%= link_to x.title, wiki_path(x.id) %>
+        </div>
        </h4>
      </div>
    </div>
  <% end %>
+ </div>
