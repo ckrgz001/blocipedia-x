@@ -1,22 +1,5 @@
-<% if @wiki.errors.any? %>
-<ul>
-  <% @wiki.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
-  <% end %>
-</ul>
-<% end %>
-
- <div class="row">
-   <div class="col-md-4">
-     <p>Guidelines for wikis</p>
-     <ul>
-       <li>Make sure it rhymes.</li>
-       <li>Don't use the letter "A".</li>
-       <li>The incessant use of hashtags will get you banned.</li>
-     </ul>
-   </div>
- </div>
-   <div class="col-md-8">
+<%= render "shared/errors", obj: @wiki%>
+   <div class="col-md-10">
      <%= form_for @wiki do |f| %>
        <div class="form-group">
          <%= f.label :title %>
